@@ -15,7 +15,7 @@ score++;}
 		// 5. Otherwise, say "wrong" and tell them the answer
 else { JOptionPane.showInputDialog("wrong! The answer is time.");}
 		// 6. Add some more riddles
-answer=JOptionPane.showInputDialog("the answer to this riddle has a hole in the middle, in tennis its nothingand it cannot be felt; the answer to this riddle has a hole in the middle");
+answer=JOptionPane.showInputDialog("the answer to this riddle has a hole in the middle, in tennis its nothing and it cannot be felt; the answer to this riddle has a hole in the middle");
 if (answer.equals("love")){JOptionPane.showInputDialog("correct"); score++;}
 else{JOptionPane.showInputDialog("wrong! The answer is love");}
 		// 2. Make a pop up to show the score.
