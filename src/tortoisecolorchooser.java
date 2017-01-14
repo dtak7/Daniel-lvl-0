@@ -25,8 +25,17 @@ else if (hi.equals("red")){
 else if (hi.equals("yellow")) {
 	Tortoise.setPenColor(PenColors.Yellows.Gold);
 }
-else if (hi.equals("purple"))
-	Tortoise.setPenColor(PenColors.Purples.Purple);
+else if (hi.equals("purple")){
+	Tortoise.setPenColor(PenColors.Purples.Purple);}
+else if (hi.equals("green")){
+	Tortoise.setPenColor(PenColors.Greens.Green);
+}
+else if (hi.equals("white")){
+	Tortoise.setPenColor(PenColors.Whites.White);
+}
+else if (hi.equals("pink")){
+	Tortoise.setPenColor(PenColors.Pinks.Pink);
+}
 else {
 	Tortoise.setPenColor(PenColors.Oranges.DarkOrange);
 }
