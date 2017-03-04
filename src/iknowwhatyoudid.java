@@ -9,7 +9,7 @@ public class iknowwhatyoudid {
 		if (hi.equals("Daniel")) {
 			JOptionPane.showMessageDialog(null, "soo " + hi + " i know that you accually went to JAPAN this summer!! ");
 		} else {
-JOptionPane.showMessageDialog(null, "iI know that you did "+answer+".MUHAHAHA");
+JOptionPane.showMessageDialog(null, "I know that you did "+answer+". MUHAHAHA");
 		}
 	}
 
