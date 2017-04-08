@@ -20,6 +20,7 @@ public class SimonSaysRecipe extends KeyAdapter {
  	private int imageIndex;
  	private int tries = 0;
  	private int simonSays = 0;
+ 	int random;
  	Date timeAtStart;
  	private  void makeAlbum() {
  // 2. add 4 images which match keyboard keys like this: images.put(new Integer(KeyEvent.VK_UP), "image.jpg");
@@ -32,22 +33,39 @@ public class SimonSaysRecipe extends KeyAdapter {
  // 4. call the method to show an image
 showImage();
  	}
+ 	
 	public void keyPressed(KeyEvent e) {
     	int keyCode = e.getKeyCode();
     	// 16. make a points variable to track the score. tell the user their score at the end.
+    	int points = 0;
     	//17. if the keyCode matches the imageIndex and "Simon says..."  increase their score
+    
     	//18.   if the keyCode doesn't match the imageIndex and "Simon didn't say..."  increase their score	
+    	
     	//19. Use the speak method to tell the user if they were correct or not
+    	if(keyCode==imageIndex &&random==0){
+    		speak("correct");
+    		points = points + 1;
+    	}
+    	else if(keyCode!=imageIndex &&random==1){
+    		speak("correct");
+    		points = points + 1;
+    	}
+    	else{
+    		speak("incorrect");
+    		points = points-1;
+    	}
     	//13. increment tries by 1
     	tries = tries+1;
     	//14. if tries is greater than 9 (or however many you want)
-    	if (tries==9){
+    	if (tries==90){
     		System.exit(0);
+    	 	frame.dispose();
     	}
     	//15.    	exit the program
 
     	//11. dispose of the frame
-    	frame.dispose();
+ 
     	//12. call the method to show an image
     	showImage();
 	}
@@ -65,7 +83,7 @@ showImage();
      	frame.addKeyListener(this);
    	 //10. Use the speak method to either say "Simon says press this key" or "Press this key"
     	//Hint: use the simonSays int and a random number
-     	int random = new Random().nextInt(2);     	
+     	 random = new Random().nextInt(2);     	
      	if (random==0){
      		speak ("Simon says press this key");
      	}

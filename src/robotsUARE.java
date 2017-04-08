@@ -6,7 +6,8 @@ public class robotsUARE {
 		// 1. Make a new Robot
 	
 			Robot rob = new Robot();
-			for (int xyz = 0; xyz < 70; xyz++) {
+			rob.setPenWidth(10);
+			for (int xyz = 0; xyz < 7000; xyz++) {
 			// 3. Put the robot's pen down
 			rob.penDown();
 
