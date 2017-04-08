@@ -63,6 +63,7 @@ GridLayout drumkit=new GridLayout();
   
     
     playSound("moredrum.wav");
+    playSound("kazoo.wav");
     
    
     
