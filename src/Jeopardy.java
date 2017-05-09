@@ -126,7 +126,7 @@ public class Jeopardy implements ActionListener {
 			secondButton.setText("");
 		}
 		if(buttonPressed==thirdButton){
-			askQuestion("do dogs have swea glands?","yes",100);
+			askQuestion("do dogs have sweat glands?","yes",100);
 			thirdButton.setText("");
 		}
 	}
