@@ -6,7 +6,7 @@ public class areyouhappy {
 		if (f.equals("yes")) {
 			JOptionPane.showMessageDialog(null, "Then keep doing whatever you're doing!");
 		} else {
-			String you = JOptionPane.showInputDialog("do you wnt to be happy???");
+			String you = JOptionPane.showInputDialog("do you want to be happy???");
 			if (you.equals("no")) {
 				JOptionPane.showMessageDialog(null, "keep doing whatever you're doing!");
 			} else {

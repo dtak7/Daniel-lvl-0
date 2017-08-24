@@ -7,6 +7,7 @@ public class robotsUARE {
 	
 			Robot rob = new Robot();
 			rob.setPenWidth(10);
+			rob.setSpeed(10);
 			for (int xyz = 0; xyz < 7000; xyz++) {
 			// 3. Put the robot's pen down
 			rob.penDown();
