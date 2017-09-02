@@ -20,11 +20,10 @@ public class PhotoQuiz {
 		JFrame quizWindow = new JFrame();
 		JPanel panel = new JPanel();
 		quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		 GridLayout Layout = new GridLayout(2,2);
-		 panel.setLayout(Layout);
-		// 1. find an image on the internet, and put its URL in a String variable (from
+		// 1. find an image on the internet, and put its URL in a String
+		// variable (from
 		// your browser, right click on the image, and select “Copy Image URL”)
-		String pic = "https://cuteoverload.files.wordpress.com/2010/03/screen-shot-2010-03-16-at-1-53-00-pm.jpg";
+		String pic = "cat.jpg";
 		// 2. create a variable of type "Component" that will hold your image
 		Component image;
 		// 3. use the "createImage()" method below to initialize your Component
@@ -32,12 +31,11 @@ public class PhotoQuiz {
 		panel.add(image);
 		quizWindow.add(panel);
 		// 4. add the image to the quiz window
-		//quizWindow.setSize(image.getWidth(), image.getHeight());
 		// 5. call the pack() method on the quiz window
 		quizWindow.pack();
 		quizWindow.setVisible(true);
 		// 6. ask a question that relates to the image
-		String wrong = JOptionPane.showInputDialog("is there something wrong with the picture??");
+		String wrong = JOptionPane.showInputDialog(null, "is there something wrong with the picture??");
 		// 7. print "CORRECT" if the user gave the right answer
 		if (wrong.equals("yes")) {
 			JOptionPane.showMessageDialog(null, "CORRECT");
@@ -46,26 +44,29 @@ public class PhotoQuiz {
 		else {
 			JOptionPane.showMessageDialog(null, "incorect");
 		}
-		// 9. remove the component from the quiz window (you may not see the effect of
+		// 9. remove the component from the quiz window (you may not see the
+		// effect of
 		// this until step 12)
-		quizWindow.remove(image);
-		// 10. find another image and create it (might take more than one line of code)
-		String pic2 ="https://petapixel.com/assets/uploads/2014/11/penguitten-Edit.jpg";
-		 Component image2;
+		panel.remove(image);
+		// 10. find another image and create it (might take more than one line
+		// of code)
+		String pic2 = "pen.jpg";
+		Component image2;
 		// 11. add the second image to the quiz window
-		 image2 = createImage(pic2);
-		 panel.add(image2);
+		image2 = createImage(pic2);
+		panel.add(image2);
+		quizWindow.add(panel);
 		// 12. pack the quiz window
-		 
+		quizWindow.pack();
+		quizWindow.setVisible(true);
 		// 13. ask another question
-
+		String wrong2 = JOptionPane.showInputDialog(null, "what kind of animal is this");
 		// 14+ check answer, say if correct or incorrect, etc..
-
+		System.exit(0);
 	}
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
-		URL url = new URL(imageUrl);
-		Icon icon = new ImageIcon(url);
+		Icon icon = new ImageIcon(imageUrl);
 		JLabel imageLabel = new JLabel(icon);
 		return imageLabel;
 	}
